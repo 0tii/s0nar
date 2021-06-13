@@ -36,6 +36,23 @@ public class ExampleEvent extends CancelableEvent
 	public String getValue() { return value; }
 }
 ```
+### Posting Events
+In order to post events from inside a source block, inject a call to `EventBus#post(Event event)` using whatever method you are most comfortable with. In a Minecraft context, Mixins have gained increasing popularity, however ASM is a valid option, too. Of course with the appearance of MCP Reborn you might want to choose just to edit source directly (which you should not lol).
 
-
+Example 1:
+```java
+//In this case GenericEvent extends Event, Main is where you instantiated the event bus
+Main.EVENT_BUS.post(new GenericEvent());
+```
+Example 2:
+```java
+//WalkEvent extends CancelableEvent and if setCanceled(true) anywhere in the event raise chain, the resulting event instance will cause a return.
+WalkEvent event = (WalkEvent) Main.EVENT_BUS.post(new WalkEvent());
+if(event.isCanceled())
+{
+	return; 
+}
+```
+### Registering Event Listeners
+In order to register event listeners, simply 
 
