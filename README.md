@@ -54,5 +54,27 @@ if(event.isCanceled())
 }
 ```
 ### Registering Event Listeners
-In order to register event listeners, simply 
+In order to register event listeners, simply annotate subscriber methods with the `S0narEventListener` @ interface and register the object of the owner class to the `EventBus`. If you wish to use priority staging, you can optionally supply the @ interface with a `priority` parameter, which takes a value from `EventPriority` enum. Do not forget to unregister your subscriber object from the `EventBus` at destruction.
+
+```java
+public class Subscriber
+{
+	public void enable()
+	{
+		Main.EVENT_BUS.register(this);
+	}
+	public void disable()
+	{
+		Main.EVENT_BUS.unregister(this);
+	}
+	@S0narEventListener(priority = EventPriority.HIGH)
+	public void onWalkEvent(WalkEvent event)
+	{
+		if(/*condition*/)
+		{
+			event.setCanceled(true);
+		}
+	}
+}
+```
 
