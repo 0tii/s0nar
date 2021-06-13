@@ -63,10 +63,12 @@ public class Subscriber
 	{
 		Main.EVENT_BUS.register(this);
 	}
+	
 	public void disable()
 	{
 		Main.EVENT_BUS.unregister(this);
 	}
+	
 	@S0narEventListener(priority = EventPriority.HIGH)
 	public void onWalkEvent(WalkEvent event)
 	{
