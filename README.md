@@ -1,7 +1,7 @@
-# S0nar Event System
+# 📡 S0nar Event System 
 ![](https://i.imgur.com/0zO3m3E.png)
 
-*"[Sonar] A whale can speak to another whale across sixty miles of ocean"*
+*"[Sonar] A whale can speak to another whale across sixty miles of ocean"* 🐳
 
 Lightweight event system, developed as part of closed-source Minecraft client Xc0n. Shipped as separate open-source project for aspiring client-developers to use.
 
@@ -79,4 +79,15 @@ public class Subscriber
 	}
 }
 ```
+## Event Staging
+S0nar gives you full flexibility over the execution order of your event listeners. Using the `priority` argument of the `S0narEventListener` annotation, you can specify the execution priority preference. Listeners assigned a higher priority will be executed first. Listeners within the same priority segment will be executed in order of registration. *Order of same-priority listeners is not guaranteed.*
+
+The `EventPriority` enum that is used to represent the `priority` value has 4 pre-configured priority-segments
+```
+TOP
+HIGH
+MEDIUM
+LOW
+```
+but can easily be expanded at will, as internally only the index values are used to determine execution order. 
 
