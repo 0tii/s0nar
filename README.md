@@ -61,11 +61,12 @@ In order to register event listeners, simply annotate subscriber methods with th
 ```java
 public class Subscriber
 {
+	//example call to register the subscriber object to the event bus	
 	public void enable()
 	{
 		Main.EVENT_BUS.register(this);
 	}
-	
+	//example call to unregister the subscriber object from the event bus
 	public void disable()
 	{
 		Main.EVENT_BUS.unregister(this);
@@ -83,6 +84,8 @@ public class Subscriber
 ```
 ## Event Staging
 S0nar gives you full flexibility over the execution order of your event listeners. Using the `priority` argument of the `S0narEventListener` annotation, you can specify the execution priority preference. Listeners assigned a higher priority will be executed first. Listeners within the same priority segment will be executed in order of registration. *Order of same-priority listeners is not guaranteed.*
+
+**If no priority argument is specified on decorated methods, the default fallback is `EventPriority.LOW`.**
 
 The `EventPriority` enum that is used to represent the `priority` value has 4 pre-configured priority-segments
 ```
