@@ -1,7 +1,7 @@
 # 📡 S0nar Event System 
 ![](https://i.imgur.com/0zO3m3E.png)
 
-*"A whale can speak to another whale across sixty miles of ocean ... how does he do it?"* 🐳
+*"A whale can speak to another whale across sixty miles of ocean"* ... how does he do it? 🐳
 
 Lightweight event system, developed as part of closed-source Minecraft client Xc0n. Shipped as separate open-source project for aspiring client-developers to use.
 
