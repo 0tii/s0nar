@@ -20,7 +20,7 @@ public static final EventBus EVENT_BUS = new EventBus(false);
 ```
 
 ### Creating Events
-Its as simple as extending ``Event`` for single-state events or ``CancelableEvent`` for, you guessed it, cancelable events. If more intrinsic event types are needed, extending either of both base classes shipped with **s0nar** will be valid.
+Its as simple as extending ``Event`` for single-state events or ``CancelableEvent`` for dual-state events. If more intrinsic event types are needed, extending either of both base classes shipped with *s0nar* will be valid.
 
 **Example event:**
 ```java
@@ -55,6 +55,8 @@ if(event.isCanceled())
 ```
 ### Registering Event Listeners
 In order to register event listeners, simply annotate subscriber methods with the `S0narEventListener` @ interface and register the object of the owner class to the `EventBus`. If you wish to use priority staging, you can optionally supply the @ interface with a `priority` parameter, which takes a value from `EventPriority` enum. Do not forget to unregister your subscriber object from the `EventBus` at destruction.
+
+**Note: Your event listener methods may not have more than one parameter, that being the event.** They should never need additional parameters anyways. Additional parsing data should probably be wrapped as event class attributes.
 
 ```java
 public class Subscriber
