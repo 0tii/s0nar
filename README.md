@@ -1,5 +1,5 @@
 # 📡 S0nar Event System 
-![](https://i.imgur.com/0zO3m3E.png)
+![](https://i.imgur.com/FcMKY9H.png)
 
 *"A whale can speak to another whale across sixty miles of ocean"* ... how does he do it? 🐳
 
