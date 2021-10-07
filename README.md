@@ -1,9 +1,10 @@
 # 📡 S0nar Event System 
 ![](https://i.imgur.com/FcMKY9H.png)
+<sub><sup>Discontinued due to market oversaturation</sup></sub>
 
 *"A whale can speak to another whale across sixty miles of ocean"* ... how does he do it? 🐳
 
-Lightweight event system, developed as part of closed-source Minecraft client Xc0n. Shipped as separate open-source project for aspiring client-developers to use.
+Lightweight event system, shipped as individual open-source project for aspiring client-developers to use.
 
 S0nar can be used as a base event system in any environment where event-injection is of use or a necessity.
 
