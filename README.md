@@ -1,6 +1,6 @@
 # 📡 S0nar Event System 
 ![](https://i.imgur.com/FcMKY9H.png)
-<sub><sup>Discontinued due to market oversaturation</sup></sub>
+<sub>Discontinued due to market oversaturation</sub>
 
 *"A whale can speak to another whale across sixty miles of ocean"* ... how does he do it? 🐳
 
