@@ -1,6 +1,8 @@
+
 # 📡 S0nar Event System 
 ![](https://i.imgur.com/FcMKY9H.png)
-<sub>Discontinued due to market oversaturation</sub>
+
+<sup><sub>Xc0n Client is discontinued due to market oversaturation</sub></sup>
 
 *"A whale can speak to another whale across sixty miles of ocean"* ... how does he do it? 🐳
 
