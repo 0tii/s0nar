@@ -57,9 +57,11 @@ if(event.isCanceled())
 }
 ```
 ### Registering Event Listeners
-In order to register event listeners, simply annotate subscriber methods with the `S0narEventListener` @ interface and register the object of the owner class to the `EventBus`. If you wish to use priority staging, you can optionally supply the @ interface with a `priority` parameter, which takes a value from `EventPriority` enum. Do not forget to unregister your subscriber object from the `EventBus` at destruction.
+In order to register event listeners, simply annotate subscriber methods with the `S0narEventListener` @ interface and register the instance of the owner class to the `EventBus`. If you wish to use priority staging, you can optionally supply the @ interface with a `priority` parameter, which takes a value from `EventPriority` enum. Do not forget to unregister your subscriber object from the `EventBus` at destruction.
 
 **Note: Your event listener methods may not have more than one parameter, that being the event.** They should never need additional parameters anyways. Additional parsing data should probably be wrapped as event class attributes.
+
+Example:
 
 ```java
 public class Subscriber
